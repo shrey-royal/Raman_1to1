@@ -14,10 +14,10 @@ void main() {
     // printf("\n%d (mod) %d = %d", a, b, a%b);    //remainder
 
     // printf("\n\nAssignment Operators: ");   //a += b; <---> a = a+b
-    // printf("\n%d + %d = %d", a, b, a += b);
-    // printf("\n%d - %d = %d", a, b, a -= b);
-    // printf("\n%d * %d = %d", a, b, a *= b);
-    // printf("\n%d / %d = %d", a, b, a /= b);    //quotient
+    // printf("\n%d + %d = %d", a-b, b, a += b);
+    // printf("\n%d - %d = %d", a+b, b, a -= b);
+    // printf("\n%d * %d = %d", a/b, b, a *= b);
+    // printf("\n%d / %d = %d", a*b, b, a /= b);    //quotient
     // printf("\n%d (mod) %d = %d", a, b, a %= b);    //remainder
 
     // printf("\n\nRelational/Comparision Operators: ");   //return boolean values (true-1 -- false-0)
@@ -37,30 +37,30 @@ void main() {
     // printf("\n\nTernary Operator: ");
     // c = (a>b)?a:b;
     // printf("\nMax: %d", c);
-    // printf("\nMax: %d", (a>b)?a:b);
+    // printf("\nMin: %d", (a<b)?a:b);
 
-    //Increment/Decrement Operator:
-    //pre - first inc/dec then assignment
+    // Increment/Decrement Operator:
+    // pre - first inc/dec then assignment
     // printf("\na = %d\t\tb = %d", a, b);
     // printf("\n++a = %d\t++b = %d", ++a, ++b);
     // printf("\na = %d\t\tb = %d", a, b);
     // printf("\n--a = %d\t--b = %d", --a, --b);
     // printf("\na = %d\t\tb = %d", a, b);
 
-    //post - first assignment then inc/dec
+    // post - first assignment then inc/dec
     // printf("\na = %d\t\tb = %d", a, b);
     // printf("\na++ = %d\tb++ = %d", a++, b++);
     // printf("\na = %d\t\tb = %d", a, b);
     // printf("\na-- = %d\tb-- = %d", a--, b--);
     // printf("\na = %d\t\tb = %d", a, b);
 
-    int a = 37, b = 26, d = 0;
-    printf("\na = %d\t\tb = %d", a, b);
+    // int a = 37, b = 26, d = 0;
+    // printf("\na = %d\t\tb = %d", a, b);
     
-    d = (++a + --b + --a - ++b - --a + b-- + a-- + --a - --b - a-- + b-- + --a + --b + --a + --b + ++a - ++b - b-- + a-- + --a + --b + a-- - b--);
-    printf("d = %d", d);
+    // d = (++a + --b + --a - ++b - --a + b-- + a-- + --a - --b - a-- + b-- + --a + --b + --a + --b + ++a - ++b - b-- + a-- + --a + --b + a-- - b--);
+    // printf("d = %d", d);
 
-    printf("\na = %d\t\tb = %d", a, b);
+    // printf("\na = %d\t\tb = %d", a, b);
 }
 
 /*
