@@ -61,6 +61,12 @@ void main() {
     // printf("d = %d", d);
 
     // printf("\na = %d\t\tb = %d", a, b);
+
+    printf("\n%d & %d = %d", 25, 12, 25&12);
+    printf("\n%d | %d = %d", 25, 12, 25|12);
+    printf("\n%d ^ %d = %d", 25, 12, 25^12);
+    printf("\n%d << %d = %d", 25, 2, 25<<2);
+    printf("\n%d >> %d = %d", 25, 2, 25>>2);
 }
 
 /*
@@ -106,5 +112,13 @@ Logical NOT (!):
 input   output
 0       1
 1       0
+
+Bitwise OR (^):
+
+exp1 exp2 answers
+0     0       0
+0     1       1
+1     0       1
+1     1       0
 
 */
