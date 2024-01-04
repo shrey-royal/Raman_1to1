@@ -1,0 +1,73 @@
+Problem  Problem 1: Row-wise Sum of a 2D Array
+You are given a 2D array. Write a function to calculate the sum of elements in each row and return a list containing these sums.
+
+Problem Input:Problem  A 2D array (matrix)  
+Problem Output:Problem  A list of row-wise sums
+
+Problem Sample Test Case:Problem   
+Input:
+```
+[[1, 2, 3],
+ [4, 5, 6],
+ [7, 8, 9]]
+```
+Output:
+```
+[6, 15, 24]
+```
+
+Problem  Problem 2: Column-wise Sum of a 2D Array
+Given a 2D array, write a function to compute the sum of elements in each column and return a list containing these sums.
+
+Problem Input:Problem  A 2D array (matrix)  
+Problem Output:Problem  A list of column-wise sums
+
+Problem Sample Test Case:Problem   
+Input:
+```
+[[1, 2, 3],
+ [4, 5, 6],
+ [7, 8, 9]]
+```
+Output:
+```
+[12, 15, 18]
+```
+
+Problem  Problem 3: Identity Matrix
+Create a function to generate an identity matrix of size n × n.
+
+Problem Input:Problem  An integer 'n' (size of the matrix)  
+Problem Output:Problem  Identity matrix of size n × n
+
+Problem Sample Test Case:Problem   
+Input:
+```
+n = 3
+```
+Output:
+```
+[[1, 0, 0],
+ [0, 1, 0],
+ [0, 0, 1]]
+```
+
+Problem  Problem 4: Unique Numbers in a 2D Array
+Write a function to print all unique numbers present in a given 2D array.
+
+Problem Input:Problem  A 2D array (matrix)  
+Problem Output:Problem  Set of unique numbers present in the matrix
+
+Problem Sample Test Case:Problem   
+Input:
+```
+[[1, 2, 2],
+ [3, 4, 4],
+ [5, 6, 6]]
+```
+Output:
+```
+{1, 2, 3, 4, 5, 6}
+```
+
+Feel free to try solving these problems or let me know if you need further assistance!
