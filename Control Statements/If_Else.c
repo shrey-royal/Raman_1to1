@@ -1,25 +1,80 @@
 #include<stdio.h>
 
 void main() {
-	int a, b;
+	int a, b, choice;
+
+	// printf("\nEnter a and b: ");
+	// scanf("%d %d", &a, &b);
+
+	// printf("\na = %d\t&a = %u", a, &a);
+	// printf("\nb = %d\t&b = %u\n\n", b, &b);
+
+	// if(a>b) {
+	// 	printf("%d > %d", a, b);
+	// } else if(a<b) {
+	// 	printf("%d < %d", a, b);
+	// } else {
+	// 	printf("%d < %d", a, b);
+	// }
 
 	// printf("\n1. Addition");
 	// printf("\n2. Subtraction");
 	// printf("\n3. Multiplication");
 	// printf("\n4. Division");
 	// printf("\n5. Remainder");
+	// printf("\nEnter your choice: ");
+	// scanf("%d", &choice);
+	
+	// if(choice == 1) {
+	// 	printf("%d + %d = %d", a, b, a+b);
+	// } else if(choice == 2) {
+	// 	printf("%d - %d = %d", a, b, a-b);
+	// } else if(choice == 3) {
+	// 	printf("%d * %d = %d", a, b, a*b);
+	// } else if(choice == 4) {
+	// 	printf("%d / %d = %d", a, b, a/b);
+	// } else if(choice == 5) {
+	// 	printf("%d (mod) %d = %d", a, b, a%b);
+	// }
 
-	printf("\nEnter a and b: ");
-	scanf("%d %d", &a, &b);
+	do {
+		printf("\nEnter a and b: ");
+		scanf("%d %d", &a, &b);
 
-	printf("\na = %d\t&a = %u", a, &a);
-	printf("\nb = %d\t&b = %u\n\n", b, &b);
+		printf("\n1. Addition");
+		printf("\n2. Subtraction");
+		printf("\n3. Multiplication");
+		printf("\n4. Division");
+		printf("\n5. Remainder");
+		printf("\n6. Exit");
+		printf("\nEnter your choice: ");
+		scanf("%d", &choice);
 
-	if(a>b) {
-		printf("%d > %d", a, b);
-	} else {
-		printf("%d < %d", a, b);
-	}
+		switch(choice) {
+			case 1:
+				printf("%d + %d = %d", a, b, a+b);
+				break;
+			case 2:
+				printf("%d - %d = %d", a, b, a-b);
+				break;
+			case 3:
+				printf("%d * %d = %d", a, b, a*b);
+				break;
+			case 4:
+				printf("%d / %d = %d", a, b, a/b);
+				break;
+			case 5:
+				printf("%d %c %d = %d", a, '%', b, a%b);
+				break;
+
+			case 6:
+				printf("\nThank you!!!");
+				break;
+
+			default:
+				printf("\nInvalid choice...");
+		}
+	} while(choice != 6);
 
 }
 
