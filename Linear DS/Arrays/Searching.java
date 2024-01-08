@@ -77,4 +77,57 @@ Explanation: The missing number between 1 to 5 is 4
 3. Find the first repeating element in an array of integers
 4. Find the missing and repeating number
 
+
+Tasks:
+
+1. Phone Book Search: Given a list of phone numbers and corresponding names, find the name associated with a given phone number.
+
+Sample Input:
+char name[3][20] = {"Vishwa", "Dhiraj Sir", "Ankit"}; (%[^\n]s)
+long long int ph[3] = {1234567890, 9876543210, 4567891230}; (%lld)
+
+---
+Sample Output:
+
+Name: Vishwa
+Phone Number: 1234567890 (use data type long long int* ph;)
+
+Name: Dhiraj Sir
+Phone Number: 9876543210
+
+Name: Ankit
+Phone Number: 4567891230
+
+---
+1. Search by name
+2. Search by phone number
+
+Enter your choice: 1
+
+Enter the name to search: Ankit
+
+Name: Ankit
+Phone Number: 4567891230
+
+---
+1. Search by name
+2. Search by phone number
+
+Enter your choice: 2
+
+Enter the phone number to search: 9876543210
+
+Name: Dhiraj Sir
+Phone Number: 9876543210
+
+---
+1. Search by name
+2. Search by phone number
+
+Enter your choice: 1
+
+Enter the name to search: Mohak
+
+Name not found, Please try again.
+
 */
