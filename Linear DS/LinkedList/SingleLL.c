@@ -1,18 +1,60 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-typedef struct {
+struct Node {
     int data;
-    Node* next;
-} Node;
+    struct Node* next;
+};
 
-void printList(Node* head) {
+void printList(struct Node* head) {
     printf("\nList ==> \t");
     while(head != NULL) {
         printf("%d -> ", head->data);
         head = head->next;
     }
     printf("NULL\n\n");
+}
+
+void InsertAtBeginning(struct Node** head, int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = *head;
+    *head = newNode;
+}
+
+void InsertAtEnd(struct Node** head, int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = NULL;
+
+    if(*head == NULL) {
+        *head = newNode;
+        return;
+    }
+
+    struct Node* last = *head;
+    while(last->next != NULL) {
+        last = last->next;
+    }
+    last->next = newNode;
+}
+
+void InsertAtPos(struct Node** head, int data, int pos) {
+    if(pos < 1) {
+        printf("Invalid Position\n");
+    } else {
+        while(pos--) {
+            if(pos == 0) {
+                // struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
+                // newNode->data = data;
+                // newNode->next = *head;
+                // *head = newNode;
+                InsertAtBeginning(head, data);
+            } else {
+                head = &((*head)->next);
+            }
+        }
+    }
 }
 
 
@@ -43,25 +85,26 @@ int main() {
         switch (choice) {
             case 1:
                 // system("cls");
+                // printf("\nsizeof(Node): %d", sizeof(struct Node));   //8
                 printf("\nEnter the data: ");
                 scanf("%d", &data);
                 InsertAtBeginning(&head, data);
                 break;
 
-            // case 2:
-            //     // system("cls");
-            //     printf("\nEnter the data: ");
-            //     scanf("%d", &data);
-            //     InsertAtEnd(&head, data);
-            //     break;
+            case 2:
+                // system("cls");
+                printf("\nEnter the data: ");
+                scanf("%d", &data);
+                InsertAtEnd(&head, data);
+                break;
             
-            // case 3:
-            //     printf("\nEnter the position: ");
-            //     scanf("%d", &position);
-            //     printf("\nEnter the data: ");
-            //     scanf("%d", &data);
-            //     InsertAtPos(&head, data, position);
-            //     break;
+            case 3:
+                printf("\nEnter the position: ");
+                scanf("%d", &position);
+                printf("\nEnter the data: ");
+                scanf("%d", &data);
+                InsertAtPos(&head, data, position);
+                break;
 
             // case 4:
             //     printf("\nEnter the key to search from the list: ");
