@@ -57,6 +57,119 @@ void InsertAtPos(struct Node** head, int data, int pos) {
     }
 }
 
+int searchByValue(struct Node* head, int key) {
+    while(head != NULL) {
+        if(head->data == key) {
+            return 1;
+        }
+        head = head->next;
+    }
+    return 0;
+}
+
+int getLength(struct Node* head) {
+    int count = 0;
+    while(head != NULL) {
+        count++;
+        head = head->next;
+    }
+    return count;
+}
+
+void reverseList(struct Node** head) {
+    struct Node* current = *head;
+    struct Node* prev = NULL;
+    struct Node* next = NULL;
+
+    while(current != NULL) {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    *head = prev;
+}
+
+void deleteAtBeginning(struct Node** head) {
+    if(*head == NULL) {
+        printf("\nList is Empty!\n");
+        system("pause");
+        return;
+    } else {
+        struct Node* temp = *head;
+        *head = temp->next;
+        free(temp);
+    }
+}
+
+void deleteAtEnd(struct Node** head) {
+    if(*head == NULL) {
+        printf("\nList is empty!\n");
+        system("pause");
+        return;
+    } else {
+        struct Node* temp = *head;
+        if(temp->next == NULL) {
+            *head = NULL;
+            free(temp);
+            return;
+        }
+
+        while(temp->next->next != NULL) {
+            temp = temp->next;
+        }
+        free(temp->next);
+        temp->next = NULL;
+    }
+}
+
+void deleteAtPosition(struct Node** head, int position) {
+    struct Node* temp, *prev;
+    temp = prev = *head;
+    // prev = *head;
+
+    if(*head == NULL) {
+        printf("\nList is empty!\n");
+        system("pause");
+        return;
+    }
+
+    if(position > getLength(*head)) {
+        printf("\nPosition is greater than the length of the list!\n");
+        system("pause");
+        return;
+    }
+
+    if(position < 1) {
+        printf("\nInvalid Position!\n");
+        return;
+    }
+
+    for(int i=0; i<position; i++) {
+        if(i == 0 && position == 1) {
+            *head = (*head)->next;
+            free(temp);
+        } else {
+            if(i == position-1 && temp) {
+                prev->next = temp->next;
+                free(temp);
+            } else {
+                prev = temp;
+                if(prev == NULL) {
+                    break;
+                }
+                temp = temp->next;
+            }
+        }
+    }
+}
+
+void PrintFromEnd(struct Node* head) {
+    if(head == NULL) return;
+    PrintFromEnd(head->next);
+    printf("%d <- ", head->data);
+}
+
 
 int main() {
     int choice, data, position, key;
@@ -106,40 +219,40 @@ int main() {
                 InsertAtPos(&head, data, position);
                 break;
 
-            // case 4:
-            //     printf("\nEnter the key to search from the list: ");
-            //     scanf("%d", &key);
-            //     // if(searchByValue(&head, key)) {
-            //     //     printf("%d present in the list...", key);
-            //     // } else {
-            //     //     printf("%d is not present in the list...", key);
-            //     // }
-            //     searchByValue(head, key) ? printf("\n%d present in the list...", key) : printf("\n%d is not present in the list...", key);
-            //     system("pause");
-            //     break;
+            case 4:
+                printf("\nEnter the key to search from the list: ");
+                scanf("%d", &key);
+                // if(searchByValue(&head, key)) {
+                //     printf("%d present in the list...\n", key);
+                // } else {
+                //     printf("%d is not present in the list...\n", key);
+                // }
+                searchByValue(head, key) ? printf("\n%d present in the list...\n", key) : printf("\n%d is not present in the list...\n", key);
+                system("pause");
+                break;
 
-            // case 5:
-            //     printf("\nLength of the list: %d\n", getLength(head));
-            //     system("pause");
-            //     break;
+            case 5:
+                printf("\nLength of the list: %d\n", getLength(head));
+                system("pause");
+                break;
 
-            // case 6:
-            //     reverseList(&head);
-            //     break;
+            case 6:
+                reverseList(&head);
+                break;
 
-            // case 7:
-            //     deleteAtBeginning(&head);
-            //     break;
+            case 7:
+                deleteAtBeginning(&head);
+                break;
 
-            // case 8:
-            //     deleteAtEnd(&head);
-            //     break;
+            case 8:
+                deleteAtEnd(&head);
+                break;
 
-            // case 9:
-            //     printf("\nEnter the position to delete the node: ");
-            //     scanf("%d", &position);
-            //     deleteAtPosition(&head, position);
-            //     break;
+            case 9:
+                printf("\nEnter the position to delete the node: ");
+                scanf("%d", &position);
+                deleteAtPosition(&head, position);
+                break;
             
             case 10:
                 // system("cls");
@@ -148,11 +261,12 @@ int main() {
                 system("pause");
                 break;
 
-            // case 11:
-            //     printf("\nList from End: ");
-            //     PrintFromEnd(head);
-            //     system("pause");
-            //     break;
+            case 11:
+                printf("\nList from End: NULL <- ");
+                PrintFromEnd(head);
+                printf("\b\b\b    \n");
+                system("pause");
+                break;
 
             case 0:
                 printf("\nExiting...\n");
@@ -165,3 +279,5 @@ int main() {
         }
     }
 }
+
+// 1 1 2 2 2 3 2 4 2 5 2 6 2 7 2 8 2 9 2 10
