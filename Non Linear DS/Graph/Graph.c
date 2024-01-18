@@ -51,11 +51,11 @@ int main() {
                 printf("\nEnter the starting node for Dijkstra's Algorithm: ");
                 int dijkstraStart;
                 scanf("%d", &dijkstraStart);
-                dijkstra(dijkstraStart);
+                // dijkstra(dijkstraStart);
                 break;
 
             case 4:
-                prim();
+                // prim();
                 break;
 
             case 5:
@@ -98,3 +98,70 @@ void addEdge(int from , int to, int weight) {
     graph[from][to] = weight;
     // graph[to][from] = weight;   //for undirected graph
 }
+
+void adjacencyMatrix(int numNodes) {
+    for (int i = 0; i < numNodes; i++) {
+        for (int j = 0; j < numNodes; j++) {
+            printf("%d  ", graph[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void depthFirstSearchUtil(int node, int visited[]) {
+    printf("%d ", node);
+    visited[node] = 1;
+
+    for (int i = 0; i < numNodes; i++) if(graph[node][i] != 0 && !visited[i]) depthFirstSearchUtil(i, visited);
+}
+
+void depthFirstSearch(int startNode) {
+    int visited[MAX_NODES] = {0};
+
+    printf("\nDepth-First Search starting from node %d: ", startNode);
+    depthFirstSearchUtil(startNode, visited);
+    printf("\n");
+}
+
+void breadthFirstSearch(int startNode) {
+    int queue[MAX_NODES];
+    int front = -1, rear = -1;
+    int visited[MAX_NODES] = {0};
+
+    printf("Breadth-First Search starting from node %d: ", startNode);
+
+    visited[startNode] = 1;
+    queue[++rear] = startNode;
+
+    while(front != rear) {
+        int currentNode = queue[++front];
+        printf("%d ", currentNode);
+
+        for(int i=0; i<numNodes; i++) {
+            if(graph[currentNode][i] != 0 && !visited[i]) {
+                visited[i] = 1;
+                queue[++rear] = i;
+            }
+        }
+    }
+
+    printf("\n");
+}
+
+/*
+0 1 2
+0 2 4
+1 2 1
+1 3 7
+2 3 3
+3 4 1
+-1 -1 -1
+
+   0  1  2  3  4
+0  0  2  4  0  0
+1  0  0  1  7  0
+2  0  0  0  3  0
+3  0  0  0  0  1
+4  0  0  0  0  0 
+
+*/
