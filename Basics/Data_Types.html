@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+</head>
+<body>
+    JavaScripts has the primitive data types:
+        <ol>
+            <li>null</li>
+            <li>undefined</li>
+            <li>boolean</li>
+            <li>number</li>
+            <li>string</li>
+            <li>symbol</li>
+            <li>bigint</li>
+            <li>object</li>
+        </ol>
+
+    <script>
+        // let counter = null;
+        // console.log(typeof counter)
+        // console.log(null == undefined)  //true
+        // console.log(Number.MAX_VALUE);
+        // console.log(Number.MIN_VALUE);
+        // console.log(Number.MAX_VALUE + Number.MAX_VALUE);   //Infinity
+        // console.log(-Number.MAX_VALUE - Number.MAX_VALUE);  //-Infinity
+        // console.log('a'/2); //NaN
+        // console.log(NaN/2); //NaN
+        // console.log(NaN == NaN);    //false
+
+        // let message = 'I\'m Batman'
+        // console.log(message);
+
+        // let str = 'JavaScript';
+        // str = str + ' String';
+
+        // console.log(str);
+
+        // let s = 'JavaScript'
+        // s[0] = 'j'
+        // console.log(s);
+        // s = "abcd"
+        // console.log(s);
+
+        // let inProgress = true;
+        // let completed = !inProgress;
+
+        // console.log(typeof completed , "\n", completed);
+
+        // console.log(Boolean('Hi'));
+        // console.log(Boolean(''));
+
+        // console.log(Boolean(20));
+        // console.log(Boolean(Infinity));
+        // console.log(Boolean(0));
+
+        // console.log(Boolean({foo: 100}));
+        // console.log(Boolean(null));
+        // console.log(Boolean(undefined));
+
+        // let s1 = Symbol()
+        // console.log(s1 == Symbol());
+
+        // console.log(typeof 1n);
+
+        let contact = {
+            firstName: 'John',
+            lastName: 'Doe',
+            email: 'john.doe@gmail.com',
+            phone: '(123)-456-7890',
+            address: {
+                building: '234',
+                street: 'North 1st street',
+                city: 'San Jose',
+                state: 'CA',
+                country: 'USA'
+            }
+        }
+
+        console.log(contact);
+
+        console.log(contact.email); //by dot notation
+        console.log(contact['phone']);  //by array-like notation
+        console.log(contact.age);   //undefined
+
+
+
+
+    </script>
+</body>
+</html>
