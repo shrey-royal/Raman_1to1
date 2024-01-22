@@ -1,0 +1,117 @@
+<!-- 
+
+In Javascript, we have total 6 types of functions:
+> Named Function
+> Anonymous Function
+> Immediately Invoked Function Expression (IIFE)
+> Arrow Function
+> Higher Order Function
+> Recursive Function
+
+> Named Function: 
+    > A function with a name is called a named function.
+    > It is the most common type of function.
+    > It can be called using its name.
+    > It can be used to perform a particular task.
+    > It can be reused.
+    > It is defined using the function keyword, followed by a name, followed by parentheses ().
+
+> Anonymous Function:
+    > A function without a name is called an anonymous function.
+    > It is also called a function expression.
+    > It is defined using the function keyword, followed by parentheses ().
+
+> Immediately Invoked Function Expression (IIFE):
+    > A function that is executed immediately after it is created is called an IIFE.
+    > It is also called a Self-Executing Anonymous Function.
+    > It is defined using the function keyword, followed by parentheses (), followed by parentheses ().
+
+> Arrow Function:
+    > A function that uses the arrow (=>) notation to define a function is called an arrow function.
+    > It is also called a fat arrow function.
+    > It is defined using the arrow (=>) notation.
+
+> IIFE:
+    > A function that is executed immediately after it is created is called an IIFE.
+    > It is also called a Self-Executing Anonymous Function.
+    > It is defined using the function keyword, followed by parentheses ().
+
+> Higher Order Function:
+    > A function that takes another function as an argument or returns another function as a result is called a higher order function.
+    > It is also called a callback function.
+    > It is defined using the function keyword, followed by parentheses (), followed by curly braces {}.
+
+> Recursive Function:
+    > A function that calls itself is called a recursive function.
+    > It is defined using the function keyword, followed by a name, followed by parentheses (), followed by curly braces {}.
+
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JS</title>
+</head>
+<body>
+    <script>
+        //Named Function
+        // function named_function(name) {
+        //     console.log("Hello " + name + "!");
+        // }
+
+        // named_function("Rishabh")
+        // named_function("Ritu")
+        // named_function("Raman")
+
+        //Anoymous Function
+        // var anoymous_fn = function(name) {
+        //     console.warn("Hello " + name + "!");
+        //     // console.error("Hello " + name + "!");
+        // }
+        // anoymous_fn("Rishi");
+
+        //Arrow Function
+        // var arrow_fn = (name) => {
+        //     console.warn(name, " bhai Samaj ja...");
+        // }
+        // name = prompt("naam daal apna: ")
+        // arrow_fn(name)
+
+        //IIFE
+        // (function(name) {
+        //     console.log("IIFE - " + name);
+        // })("Rutvik");
+
+        //Higher Order Function
+        // function high (func, a, b) {
+        //     return func(a, b);
+        // }
+
+        // function addition(a, b) {
+        //     return a+b
+        // }
+
+        // function subtraction(a, b) {
+        //     return a-b
+        // }
+        // console.log(high(subtraction, 1, 2));
+
+        // console.clear();
+
+        //Recursive Function
+        function recursive_fn(n) {
+            if(n == 0) {
+                return 1;
+            }
+            return n * recursive_fn(n-1);
+        }
+        console.log(recursive_fn(5))
+
+        
+
+    </script>
+</body>
+</html>
