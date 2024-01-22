@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Types</title>
+    <!-- <script>
+        "use strict";
+        a = 058
+        console.log(a);
+    </script> -->
 </head>
 <body>
     JavaScripts has the primitive data types:
@@ -65,26 +70,74 @@
 
         // console.log(typeof 1n);
 
-        let contact = {
-            firstName: 'John',
-            lastName: 'Doe',
-            email: 'john.doe@gmail.com',
-            phone: '(123)-456-7890',
-            address: {
-                building: '234',
-                street: 'North 1st street',
-                city: 'San Jose',
-                state: 'CA',
-                country: 'USA'
-            }
-        }
+        // let contact = {
+        //     firstName: 'John',
+        //     lastName: 'Doe',
+        //     email: 'john.doe@gmail.com',
+        //     phone: '(123)-456-7890',
+        //     address: {
+        //         building: '234',
+        //         street: 'North 1st street',
+        //         city: 'San Jose',
+        //         state: 'CA',
+        //         country: 'USA'
+        //     }
+        // }
 
-        console.log(contact);
+        // console.log(contact);
 
-        console.log(contact.email); //by dot notation
-        console.log(contact['phone']);  //by array-like notation
-        console.log(contact.age);   //undefined
+        // console.log(contact.email); //by dot notation
+        // console.log(contact['phone']);  //by array-like notation
+        // console.log(contact.age);   //undefined
 
+
+        // Number seperators
+        // let budget = 1_000_000_000
+        // console.log(budget);
+
+        // let a = 0xB;
+        // console.log(a);
+
+        // let name = "John"
+        // let age = 23
+
+        // let person = {
+        //     name: 'John',
+        //     age: 23,
+        // };
+
+        // person.ssn = '123-123-1222'
+        // person.name = "abcd";
+        // // delete person.age
+        // console.log(person);
+
+        // let naam = "James"
+        // name.alias = 'Bond'
+
+        // console.log(naam.alias);
+
+        //Nullish Coalescing operator
+        // value1 ?? value2
+        // ~ to 
+        // const result = value1;
+        // if(result === null || result == undefined) {
+        //     result = value2;
+        // }
+
+        // const name = null ?? 'John';
+        // console.log(name);
+
+        // const age = undefined ?? 28;
+        // console.log(age);
+
+        // let result = 1 ?? console.log('Hi')
+        // console.log(result);
+
+        //Comma Operator
+        let x = 10
+        let y = (x++, x+1);
+
+        console.log(x, y);
 
 
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays in JS</title>
+    <script src="./script.js"></script>
+</head>
+<body>
+    <h1>Arrays in JS</h1>
+    <p>In JavaScript, an array is a data structure that allows you to store manipulate a collection of values under a single variable. Arrays can hold elements of different data types, including numbers, strings, objects, and even other arrays. Let's explore the key concepts of arrays in JavaScript.</p>
+
+    <h2>Creating and Accessing Arrays</h2>
+    <p>You can create an array by enclosing its elements in square brackets <code>[]</code>.
+        Here's an example of creating an array with numbers:
+        <code>
+            let numbers  = [1, 2, 3, 4, 5];
+        </code>
+        Elements in an rray are accessed using their index, starting from 0.
+        For example, to access the first element in the array:
+        <code>
+            console.log(numbers[0]);    // Output: 1
+        </code>
+        To access the last element in the array:
+        <code>
+            console.log(numbers[numbers.length - 1]);    // Output: 5
+        </code>
+    </p>
+
+    <h2>Array Methods</h2>
+    <p>
+        JavaScript arrays provide several built-in methods to manipulate and perform operations on the elements.
+        Some Commonly used array methods include:
+        <code>push</code>, <code>pop</code>, <code>shift</code>, <code>unshift</code>, <code>splice</code>, <code>slice</code>, <code>concat</code>, <code>indexOf</code>, <code>includes</code>, <code>forEach</code>, <code>map</code>, <code>filter</code>, and <code>reduce</code>.
+        These methods allow you to add or remove elements, search for elements, iterate over the array, transform the array, and more.
+    </p>
+
+    <h2>Iterating Over Arrays</h2>
+    <p>
+        There are multiple ways to iterate over the elements of an array in JavaScript.
+        You can use a traditional <code>for</code> loop with an index, or utilize array methods like <code>forEach</code>, <code>map</code>, <code>filter</code>, and <code>reduce</code>.
+        These methods provide a concise and expressive way to iterate over arrays and perform operations on each element.
+    </p>
+
+    <h2>Multidimensional Arrays</h2>
+    <p>
+        JavaScript allows you to create multidimensional arrays, which are arrays of arrays.
+        This means you can have arrays nested within other arrays, forming a matrix-like structure.
+        Multidimensional arrays are useful when dealing with tabular data or nested structures.
+        For example:
+        <code>
+        let matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        </code>
+        To access elements in a multidimensional array, you need to provide both the row and column indices.
+        For example, to access the element at the second row and third column:
+        <code>
+        console.log(matrix[1][2]); // Output: 6
+        </code>
+    </p>
+</body>
+</html>
