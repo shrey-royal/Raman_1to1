@@ -22,7 +22,58 @@
             return charArray.join('')
         }
         
-        console.log(alphabet_order("webmaster"))
+        // console.log(alphabet_order("webmaster"))
+
+        //Hard Problem
+        const letterCombinations = (digits) => {
+            const length = digits?.length;
+            const result = []
+            console.log("Length =", length);
+
+            if(!length) {
+                console.log("is length 0? -> ", length);
+                return result;
+            }
+
+            const digitMap = {
+                1: 'abc',
+                2: 'def',
+                3: 'ghi',
+                4: 'jkl',
+                5: 'mno',
+                6: 'pqr',
+                7: 'stu',
+                8: 'vwx',
+                9: 'yz',
+            };
+
+            const generateCombinations = (index, combination) => {
+                let letter;
+                let letterIndex;
+
+                // console.log("False --> ", index + " index and " + combination + " combination");
+                if(index >= length) {
+                    // console.log("true --> ", index + " index and " + combination + " combination");
+                    result.push(combination);
+                    return;
+                }
+
+                const digit = digitMap[digits[index]];
+
+                letterIndex = 0;
+                while((letter = digit[letterIndex++])) {
+                    generateCombinations(index+1, combination+letter);
+                    console.log(combination + " -> " + letter);
+                }
+            };
+            generateCombinations(0, '');
+
+            return result;
+        };
+
+        console.log(letterCombinations("12"));
+        // console.log(letterCombinations("91"));
+        // console.log(letterCombinations(""));    //is length 0? 0
 
     </script>
 </body>
@@ -40,6 +91,19 @@ Test Data:
 (test("a") -> true
 
 >  A string consists of digits ranging from 2 to 9, inclusive. Write a JavaScript program to get all possible letter combinations that represent the number using recursion.  
+
+Letter Combinations:
+1: 'abc',
+2: 'def',
+3: 'ghi',
+4: 'jkl',
+5: 'mno',
+6: 'pqr',
+7: 'stu',
+8: 'vwx',
+9: 'yz'
+
+
 Test Data:
 ("12") -> ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
 ("9") -> ["y", "z"]
