@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <style>
+
+        table{
+            width: 100%;
+        }
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        thead{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Objects</h2>
+    <p>A JavaScript object is an entity having state and behaviour(properties and methods).<br>JavaScript is an Object-based language.</p>
+
+    <br><br>
+    <p>In JavaScript, almost everything is an object.<br>
+        <!-- tag that is used to give indentation in html -->
+        <pre>
+            <span>&#x25CF;</span> Boolean  can be objects (if defined with the new keyword)<br>
+            <span>&#x25CF;</span> Numbers can be objects (if defined with the new keyword)<br>
+            <span>&#x25CF;</span> Strings can be objects (if defined with the new keyword)<br>
+            <span>&#x25CF;</span> Dates are always objects<br>
+            <span>&#x25CF;</span> Maths are always objects<br>
+            <span>&#x25CF;</span> Regular expressions are always objects<br>
+            <span>&#x25CF;</span> Arrays are always objects<br>
+            <span>&#x25CF;</span> Functions are always objects<br>
+            <span>&#x25CF;</span> Objects are always objects<br>
+        </pre>
+
+        All JavaScript values, except primitives, are objects.
+    </p>
+
+    <br><br>
+
+    <h3>Creating a JavaScript Object</h3>
+    <p>There are different ways to create new objects:</p>
+    <p>1. Create a single object, using an object literal.</p>
+    <p>2. Create a single object, with the keyword new.</p>
+    <p>3. Define an object constructor, and then create objects of the constructed type.</p>
+    <br><br>
+
+    <h3>Using an Object Literal</h3>
+    <p>This is the easiest way to create a JavaScript Object.</p>
+    <p>Using an object literal, you both define and create an object in one statement.</p>
+    <p>An object literal is a list of name:value pairs (like age:50) inside curly braces {}.</p>
+    <p>The following example creates a new JavaScript object with four properties:</p>
+    <p>Example:</p>
+    <pre>
+        var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+    </pre>
+    <br><br>
+
+    <h3>Using the JavaScript Keyword new</h3>
+    <p>The following example also creates a new JavaScript object with four properties:</p>
+    <p>Example:</p>
+    <pre>
+        var person = new Object();
+        person.firstName = "John";
+        person.lastName = "Doe";
+        person.age = 50;
+        person.eyeColor = "blue";
+    </pre>
+    <br><br>
+
+    <h3>Using an Object Constructor</h3>
+    <p>The following example also creates a new JavaScript object with four properties:</p>
+    <p>Example:</p>
+    <pre>
+        function person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+        }
+        var myFather = new person("John", "Doe", 50, "blue");
+        var myMother = new person("Sally", "Rally", 48, "green");
+    </pre>
+    <br><br>
+
+    <h3>JavaScript Object Methods</h3>
+    <table>
+        <thead>
+            <tr>
+                <td>S.No.</td>
+                <td>Methods</td>
+                <td>Description</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Object.assign()</td>
+                <td>This method is used to copy enumerable and own properties from a source object to a target object</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Object.create()</td>
+                <td>This method is used to create a new object with the specified prototype object and properties</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Object.defineProperty()</td>
+                <td>This method is used to add the property to an object and specifies the behavior of the property</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Object.defineProperties()</td>
+                <td>This method is used to add the properties to an object and specifies the behavior of the property</td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Object.entries()</td>
+                <td>This method is used to return an array of a given object's own enumerable property [key, value] pairs</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Object.freeze()</td>
+                <td>This method is used to freeze an object. In other words, it prevents adding new properties to an object, removes all existing properties, and prevents changing the existing properties</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>Object.is()</td>
+                <td>This method is used to determine whether two values are the same value</td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td>Object.isExtensible()</td>
+                <td>This method is used to determine if extending of an object is allowed</td>
+            </tr>
+
+            <tr>
+                <td>9</td>
+                <td>Object.isFrozen()</td>
+                <td>This method is used to determine if an object is frozen</td>
+            </tr>
+
+            <tr>
+                <td>10</td>
+                <td>Object.isSealed()</td>
+                <td>This method is used to determine if an object is sealed</td>
+            </tr>
+
+            <tr>
+                <td>11</td>
+                <td>Object.keys()</td>
+                <td>This method is used to return an array of a given object's own enumerable property names</td>
+            </tr>
+
+            <tr>
+                <td>12</td>
+                <td>Object.preventExtensions()</td>
+                <td>This method is used to prevent adding new properties to an object (i.e. prevents future extensions to the object)</td>
+            </tr>
+
+            <tr>
+                <td>13</td>
+                <td>Object.seal()</td>
+                <td>This method is used to seal an object, by preventing new properties from being added to it and marking all existing properties as non-configurable</td>
+            </tr>
+
+            <tr>
+                <td>14</td>
+                <td>Object.setPrototypeOf()</td>
+                <td>This method is used to set the prototype (i.e., the internal [[Prototype]] property)</td>
+            </tr>
+
+            <tr>
+                <td>15</td>
+                <td>Object.values()</td>
+                <td>This method is used to return an array of a given object's own enumerable property values</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+    <!-- partial:script.js -->
+    <script src="./script.js"></script>
+    <!-- <script src="./obj.js"></script> -->
+</body>
+</html>
