@@ -206,3 +206,39 @@ Object.setPrototypeOf(obj, protoObj);
 obj.b = 23
 console.log(obj);
 console.log(protoObj);
+
+
+/*
+Tasks: (Using Object Methods)
+
+1. Library Catalog Management:
+   - Problem: You are building a simple library system. Create an object to represent a library catalog. Implement methods to add new books, remove books, and display the current book inventory.
+
+2. Shopping Cart Handling:
+   - Problem: Develop an e-commerce shopping cart object. Implement methods to add items to the cart, remove items, and calculate the total price of all items in the cart.
+
+3. Social Media Profile Interaction:
+   - Problem: Design a social media user profile object. Create methods to update the user's status and display the user profile with the current status.
+
+4. Bank Account Operations:
+   - Problem: Model a bank account using an object. Write methods to deposit money, withdraw money (if sufficient funds are available), and check the account balance.
+
+5. Restaurant Menu Maintenance:
+   - Problem: Represent a restaurant menu using an object. Write methods to add new dishes, remove dishes, and display the current menu.
+
+6. Weather Forecast System:
+   - Problem: Build a weather forecast object. Implement methods to update the weather conditions and display the current forecast for a specific location.
+
+7. Fitness Tracking System:
+   - Problem: Create a fitness tracker object. Develop methods to log exercises, calculate the total workout time, and display the workout history.
+
+8. Email Inbox Management:
+   - Problem: Develop an email inbox object. Write methods to mark emails as read, archive emails, and display the current contents of the inbox.
+
+9. Task Manager Application:
+   - Problem: Build a task management object. Implement methods to add tasks, mark tasks as complete, and display the current task list.
+
+10. Student Gradebook:
+    - Problem: Create a student gradebook object. Write methods to add grades for different subjects, calculate the average grade, and display the student's academic performance.
+
+*/
