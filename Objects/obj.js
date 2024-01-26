@@ -1,3 +1,4 @@
+/*
 const spaceX = {
   "organization": {
     "name": "Galactic Explorations Inc.",
@@ -57,6 +58,7 @@ const spaceX = {
 }
 
 console.log(spaceX);
+*/
 
 //Map
 // const divisionNames = spaceX.organization.divisions.map(division => division.name);
@@ -98,10 +100,10 @@ console.log(spaceX);
 // console.log(allProjectsInProgress);
 
 //Reduce
-const totalCrewMembers = spaceX.organization.divisions.find(division => division.name === "Mission Control").missions.reduce((total, mission) => total + mission.crew.length, 0);
-console.log(totalCrewMembers);
+// const totalCrewMembers = spaceX.organization.divisions.find(division => division.name === "Mission Control").missions.reduce((total, mission) => total + mission.crew.length, 0);
+// console.log(totalCrewMembers);
 
-/*
+
 var myObj = {
     "university": {
       "name": "Central University",
@@ -278,7 +280,25 @@ var myObj = {
     }
   }
 
-*/
+
+// Q4
+console.time();
+const allStudents = myObj.university.faculties
+  .flatMap(faculty => faculty.departments)
+  .flatMap(department => department.courses)
+  .flatMap(course => course.students)
+
+const studentWithHighestAverageGrade = allStudents.reduce((studentWithHighestAverageGrade, student) => {
+  const avgGrade = student.grades.reduce((total, grade) => total + grade, 0) / student.grades.length;
+  if(!studentWithHighestAverageGrade || avgGrade > studentWithHighestAverageGrade.avgGrade) {
+    return { ...student, avgGrade };
+  }
+  return studentWithHighestAverageGrade;
+}, null);
+
+console.log(studentWithHighestAverageGrade);
+console.timeEnd()
+
 
 /*
 Let's break down the structure and explain the JSON object:
