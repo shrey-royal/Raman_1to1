@@ -1,0 +1,9 @@
+1. Question: Create a class called `Person` with a constructor that takes `name` and `age` as parameters. Add a method called `introduce` that prints "Hi, my name is [name] and I am [age] years old." Create an instance of the `Person` class and call the `introduce` method.
+
+2. Question: Define a class called `Car` with a constructor that takes `make`, `model`, and `year` as parameters. Add a method called `getDescription` that returns a string in the format "[year] [make] [model]". Create an instance of the `Car` class and call the `getDescription` method.
+
+3. Question: Extend the `Rectangle` class to create a new class called `Square`. The `Square` class should have a constructor that takes `sideLength` as a parameter and sets both the `width` and `height` properties to the `sideLength` value. Create an instance of the `Square` class and call the `getArea` method.
+
+4. Question: Create a static method called `isEven` in a class called `NumberUtils`. The `isEven` method should take a number as a parameter and return `true` if the number is even, and `false` otherwise. Call the `isEven` method on the `NumberUtils` class with a sample number.
+
+5. Question: Create a class called `BankAccount` with properties `balance` (initially set to 0) and `accountNumber`. Add getter and setter methods for the `balance` property. The setter should check if the new balance is negative and prevent it from being set. Create an instance of the `BankAccount` class, set an initial balance, and try to set a negative balance to test the setter.
