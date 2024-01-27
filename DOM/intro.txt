@@ -1,0 +1,69 @@
+DOM: Document Object Model
+
+DOM is a programming interface for HTML and XML documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects. That way, programming languages can connect to the page.
+
+The DOM is an object-oriented representation of the web page, which can be modified with a scripting language such as JavaScript. The DOM does not depend on a specific programming language, allowing you to manipulate the structure, style, and content of a document.
+
+The DOM represents a document with a logical tree. Each branch of the tree ends in a node, and each node contains objects. DOM methods allow programmatic access to the tree. With them, you can change the document's structure, style, or content.
+
+The DOM is a W3C (World Wide Web Consortium) standard.
+
+The DOM defines a standard for accessing documents:
+
+"The W3C Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document."
+
+The W3C DOM standard is separated into 3 different parts:
+
+Core DOM - standard model for all document types
+XML DOM - standard model for XML documents
+HTML DOM - standard model for HTML documents
+
+The HTML DOM is a standard object model and programming interface for HTML. It defines:
+
+The HTML elements as objects
+The properties of all HTML elements
+The methods to access all HTML elements
+The events for all HTML elements
+
+In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+
+Methods of Document Object
+
+1. write("string") - writes the given string on the document
+2. writeln("string") - writes the given string on the document and adds a newline character at the end
+3. getElementById("id") - returns the element with the given id
+4. getElementsByTagName("tag") - returns a list of elements with the given tag name
+5. getElementsByClassName("class") - returns a list of elements with the given class name
+6. getElementsByName("name") - returns a list of elements with the given name
+
+innerHTML Property: The innerHTML property can be used to get or change any HTML element, including <html> and <body>.
+
+> The innerHTML property is useful for getting or replacing the entire content of an element.
+
+innerText Property: The innerText property can be used to get or change any text in an element, including <script> and <style> elements.
+
+
+Finding HTML Elements
+
+document.getElementById(id)
+document.getElementsByTagName(name)
+document.getElementsByClassName(name)
+
+Changing HTML Elements
+
+element.innerHTML =  new html content
+element.attribute = new value
+element.setAttribute(attribute, value)
+element.style.property = new style
+
+Adding and Deleting Elements
+
+document.createElement(element)
+document.removeChild(element)
+document.appendChild(element)
+document.replaceChild(new, old)
+document.write(text)
+
+Adding Events Handlers
+
+document.getElementById(id).onclick = function(){code}

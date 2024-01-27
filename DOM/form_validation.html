@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <script>
+        function printData() {
+            var name = document.form.name.value;
+            alert(name)
+        }
+
+        function getCube() {
+            var n = document.form.num.value;
+            // alert(n*n*n)
+            document.form.num.value = n*n*n;
+        }
+
+        function totalelements() {
+            var allgenders = document.getElementsByName("gender");
+            // alert("Total Genders: " + allgenders.length)
+            // console.log(allgenders);
+        }
+
+        function showSelected() {
+            var selectedGender = document.querySelector('input[name="gender"]:checked');
+            if(selectedGender) {
+                alert("Selected Gender: " + selectedGender.value);
+            } else {
+                alert("Please selected a gender.")
+            }        
+        }
+
+        function countparagraph() {
+            var para = document.getElementsByTagName("p");
+            // alert("Total Paragraphs: " + para.length);
+            document.getElementById("result").innerHTML = para.item(0).innerHTML;
+        }
+
+        function showForm() {
+            var data = "Name: <input type='text' name='name' placeholder='Enter your name'><br><br>Comment: <textarea name='comment' placeholder='Enter your comment'></textarea><br><br><input type='button' value='Submit'>";
+
+            document.getElementById("showformhere").innerHTML = data;
+        }
+
+        function hideForm() {
+            document.getElementById("showformhere").innerHTML = "";
+        }
+
+        function validate() {
+            var msg;
+            if(document.form.password.value.length > 5) {
+                msg = "Strong";
+            } else {
+                msg = "Weak";
+            }
+            document.getElementById("p_id").innerHTML = msg;
+        }
+    </script>
+</head>
+<body>
+    <form action="post" name="form">
+        <input type="text" name="name" placeholder="Enter your name">
+        <input type="button" value="Print Name" onclick="printData()">
+        <br><br>
+
+        <input type="number" name="num" placeholder="Enter a number">
+        <input type="button" value="Get Cube" onclick="getCube()">
+        <br><br>
+
+        Male: <input type="radio" name="gender" value="male">
+        Female: <input type="radio" name="gender" value="female">
+        <input type="button" value="Total Genders" onclick="totalelements(), showSelected()">
+        <br><br>
+
+        <p>This is a paragraph</p>
+        <p>This is an original one</p>
+        <p>now comes the copy</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <input type="button" value="Count Paragraphs" onclick="countparagraph()">
+        <br>
+        Item[0]: <p id="result"></p>
+        <br><br>
+
+        <input type="button" value="Show Form" onclick="showForm()"> | 
+        <input type="button" value="Hide Form" onclick="hideForm()"> 
+        <div id="showformhere"></div>
+        <br><br>
+
+        <input type="password" name="password" onkeyup="validate()">
+        Strength: <span id="p_id">No Strength</span>
+
+    </form>
+</body>
+</html>

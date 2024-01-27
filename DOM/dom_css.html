@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM in CSS</title>
+</head>
+<body>
+    <p id="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis explicabo laudantium vero odio iure placeat suscipit deleniti doloremque delectus alias tempora, officia nemo dicta totam sequi possimus quibusdam, numquam voluptates perferendis quasi quaerat nam quae. Ullam, non? Est dolore odio atque explicabo reprehenderit dolorum optio repellendus aut quae, magni ducimus.</p>
+    
+    <h1 id="id1">Raman is learning JS</h1>
+    <button type="button" onclick="document.getElementById('id1').style.color='orange'" onkeyup="document.getElementById('id1').style.color='red'">Click me to change color</button>
+
+
+    <script>
+        var a = document.getElementById("one").style
+
+        a.color = "maroon"
+        a.backgroundColor = 'lightgrey'
+        a.padding = "10px"
+        a.border = "1px solid black"
+        a.borderRadius = "5px"
+        a.boxShadow = "5px 5px 5px lightgrey"
+    </script>
+</body>
+</html>
