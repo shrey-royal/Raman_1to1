@@ -74,11 +74,35 @@ public class DoubleLL {
     }
 
     public void deleteFromFront() {
-        //
+        if(head == null) {
+            System.out.println("List is Empty!");
+            return;
+        }
+
+        if(head == tail) {
+            head = null;
+            tail = null;
+        } else {
+            head = head.next;
+            head.prev = null;
+        }
+        size--;
     }
 
     public void deleteFromEnd() {
-        //
+        if(head == null) {
+            System.out.println("List is Empty!");
+            return;
+        }
+
+        if(head == tail) {
+            head = null;
+            tail = null;
+        } else {
+            tail = tail.prev;
+            tail.next = null;
+        }
+        size--;
     }
 
     public void deleteNode(Node node) {
