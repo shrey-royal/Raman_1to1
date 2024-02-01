@@ -66,11 +66,41 @@ public class DoubleLL {
     }
 
     public void insertBeforeNode(Node nextNode, int data) {
-        //
+        if (nextNode == null) {
+            System.out.println("Next node cannot be null.");
+            return;
+        }
+        Node newNode = new Node(data);
+        newNode.next = nextNode;
+        newNode.prev = nextNode.prev;
+        if (nextNode.prev != null)
+            nextNode.prev.next = newNode;
+        else
+            head = newNode;
+        nextNode.prev = newNode;
+        size++;
     }
 
     public void insertAtIndex(int index, int data) {
-        //
+        if (index < 0 || index > size) {
+            System.out.println("Invalid index.");
+            return;
+        }
+        if (index == 0)
+            insertAtFront(data);
+        else if (index == size)
+            insertAtEnd(data);
+        else {
+            Node currentNode = head;
+            for (int i = 0; i < index - 1; i++)
+                currentNode = currentNode.next;
+            Node newNode = new Node(data);
+            newNode.next = currentNode.next;
+            newNode.prev = currentNode;
+            currentNode.next.prev = newNode;
+            currentNode.next = newNode;
+            size++;
+        }
     }
 
     public void deleteFromFront() {
@@ -106,11 +136,30 @@ public class DoubleLL {
     }
 
     public void deleteNode(Node node) {
-        //
+        if (node == null) {
+            System.out.println("Node cannot be null.");
+            return;
+        }
+        if (node == head)
+            deleteFromFront();
+        else if (node == tail)
+            deleteFromEnd();
+        else {
+            node.prev.next = node.next;
+            node.next.prev = node.prev;
+            size--;
+        }
     }
 
     public void deleteAtIndex(int index) {
-        //
+        if (index < 0 || index >= size) {
+            System.out.println("Invalid index.");
+            return;
+        }
+        Node currentNode = head;
+        for (int i = 0; i < index; i++)
+            currentNode = currentNode.next;
+        deleteNode(currentNode);
     }
 
     public void traverseForward() {
