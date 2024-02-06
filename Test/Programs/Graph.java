@@ -67,6 +67,33 @@ public class Graph {
         System.out.println();
     }
 
+    void BFS(int startVertex) {
+        boolean[] visited = new boolean[V];
+        System.out.println("Bredth-First Search: ");
+
+        int[] queue = new int[V];
+        int front = 0, rear = -1;
+
+        visited[startVertex] = true;
+        queue[++rear] = startVertex;
+
+        while (front <= rear) {
+            int v = queue[front++];
+            System.out.print(v + " ");
+
+            Node temp = adjList[v];
+            while(temp != null) {
+                int n = temp.data;
+                if(!visited[n]) {
+                    visited[n] = true;
+                    queue[++rear]= n;
+                }
+                temp = temp.next;
+            }
+        }
+        System.out.println();
+    }
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
